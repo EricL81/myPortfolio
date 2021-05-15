@@ -1,7 +1,7 @@
 :root {
-    --primary: #f6bd00;
+    --primary: #ffdc6a;
     --bg-green: #062633;
-    --greenLight: #0b475f;
+    --greenLight: #0f5774;
     --greenDark: #0c181d;
     --greyDark: #9baacf;
     --clr-neon: #f6bd00;
@@ -17,14 +17,15 @@
 body, #my-navbar {
     background: var(--bg-green);
     ;
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Montserrat Alternates', sans-serif;
 }
 
-header p {
-    font-size: 7rem;
-    font-family: 'Kanit', sans-serif;
+header h1 {
+    font-family: 'Montserrat Subrayada', sans-serif;
     margin-bottom: 0;
     line-height: 80%;
+    padding: 1rem;
+    font-size: 8vw;
 }
 
 .hero {
@@ -35,7 +36,7 @@ header p {
     position: absolute;
     z-index: 99;
     text-align: center;
-    bottom: 0;
+    bottom: -20px;
     right: 0;
     /*     text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.5em var(--clr-neon);
  */
@@ -50,36 +51,14 @@ header p {
     -webkit-text-fill-color: transparent;
 }
 
-.me-wrapper {
-    position: relative;
-    height: 20rem;
-    width: 20rem;
-}
-
 #me {
-    margin-top: 5rem;
-    width: 25rem;
-    height: 25rem;
-    position: relative;
-    left: 2rem;
+    max-width: 350px;
 }
 
-#me img {
-    clip-path: circle(77.4% at 69% 33%);
-    position: absolute;
-    top: 1rem;
-}
-
-#me::after {
-    content: '';
-    position: absolute;
-    top: 1.7rem;
-    width: 22.8rem;
-    height: 22.8rem;
-    border-radius: 50%;
-    background-color: #008a9c;
-    opacity: 0.7;
-    z-index: -1;
+@media only screen and (max-width:768px) {
+    #me {
+        max-width: 300px;
+    }
 }
 
 #bg-canvas1 {
@@ -98,12 +77,48 @@ header p {
     left: 0;
 }
 
+/* #me {
+    position: relative;
+    z-index: 99;
+} */
+
 .canvas {
     width: 100%;
     height: 100%;
     top: 0rem;
     left: 0;
     overflow: hidden;
+}
+
+nav button {
+    background: transparent;
+    border: none;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-toggler {
+    border: none !important;
+    color: transparent !important;
+}
+
+.icon {
+    font-family: "Anicons Regular", sans-serif;
+    font-variation-settings: "TIME" 1;
+    transition: font-variation-settings 0.4s ease;
+    color: var(--primary);
+    font-size: 2rem;
+}
+
+.icon-close {
+    font-family: "Anicons Regular", sans-serif;
+    font-variation-settings: "TIME" 100;
+    transition: font-variation-settings 0.4s ease;
+    color: var(--primary);
+    font-size: 2rem;
 }
 
 .neon-button {
@@ -157,30 +172,6 @@ header p {
     opacity: 1;
 }
 
-footer {
-    font-family: 'Orbitron', sans-serif;
-    /*     position: absolute;
- */
-    width: 100%;
-    color: white;
-    font-size: 1rem;
-    background: var(--bg-green);
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    height: 30px;
-    line-height: 30px;
-    padding-right: 20px;
-    position: relative;
-    z-index: 999;
-}
-
-footer a {
-    text-decoration: none;
-    color: var(--primary);
-}
-
 .segmented-control {
     width: 20.4rem;
     height: 3rem;
@@ -195,9 +186,9 @@ footer a {
     display: none;
 }
 
-.segmented-control>input:checked+label a {
+.segmented-control>input:checked+label {
     transition: all 0.5s ease;
-    color: var(--greyDark);
+    color: var(--primary);
 }
 
 .segmented-control__1, .segmented-control__2, .segmented-control__3 {
@@ -208,12 +199,12 @@ footer a {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    color: var(--primary);
+    color: var(--greyDark);
     transition: all 0.5s ease;
 }
 
 .segmented-control__1:hover, .segmented-control__2:hover, .segmented-control__3:hover, footer a:hover {
-    color: var(--greyDark);
+    color: var(--greenLight);
 }
 
 .segmented-control__color {
@@ -226,7 +217,7 @@ footer a {
     pointer-events: none;
 }
 
-#tab-1:checked~.segmented-control__color {
+#tab-1:checked+label~.segmented-control__color {
     transform: translateX(0);
     transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
@@ -241,19 +232,27 @@ footer a {
     transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
-#aboutme, #contact {
-    background-color: var(--greenDark);
-}
-
-#contact__head {
-    background-color: var(--greenDark);
-    color: var(--primary);
-    position: sticky;
-    top: 76px;
+.section_title {
+    font-family: 'Montserrat Subrayada', sans-serif;
+    font-size: 2.5rem;
 }
 
 #aboutme {
+    background-image: linear-gradient(to bottom, #0c181d, #0e232c, #0f2f3c, #0e3b4d, #0b475f);
+    height: calc(100vh - 76px);
+    position: relative;
+    overflow-x: hidden;
+    z-index: -1;
+    scroll-margin-top: 76px;
+}
+
+#aboutme__sticky {
     color: var(--primary);
+}
+
+#aboutme .col-10 {
+    position: relative;
+    z-index: 99;
 }
 
 #aboutme .logo {
@@ -269,22 +268,55 @@ footer a {
 }
 
 #projects__head {
-    background-color: var(--bg-green);
     color: var(--primary);
+    /* background-color: var(--bg-green);
+    background: transparent;
     position: sticky;
-    top: 76px;
+    top: 76px; */
+}
+
+#container__projects {
+    /*     background-color: var(--bg-green);
+ */
+    position: relative;
+    overflow: hidden;
+    min-height: calc(100vh - 76px);
+    scroll-margin-top: 74px;
+}
+
+#container__projects::before {
+    content: " ";
+    position: absolute;
+    left: -50%;
+    top: -50%;
+    z-index: -1;
+    background-image: url(../css/cyber-bg.png);
+    opacity: 0.5;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    width: 200%;
+    height: 200%;
+    /*     transform: rotate(360deg);
+    transform-origin: center;
+    transition: transform 5s ease; */
+    transform: scale(2);
+    transform-origin: center;
+    animation: spin 150s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg)
+    }
+    to {
+        transform: rotate(360deg)
+    }
 }
 
 #projects {
-    background-color: var(--bg-green);
-    min-height: calc(100vh - 76px);
-}
-
-#aboutme, #contact {
-    height: calc(100vh - 76px);
-    position: relative;
-    overflow-x: hidden;
-    z-index: -1;
+    justify-content: center;
 }
 
 .box {
@@ -298,7 +330,8 @@ footer a {
 .box img {
     width: 100%;
     height: auto;
-    transform: scale3d(1.1, 1.1, 1);
+    /*     transform: scale3d(1.1, 1.1, 1);
+ */
     transition: all 0.25s linear;
 }
 
@@ -377,23 +410,25 @@ footer a {
     display: block;
 }
 
-.box .icon {
+.project_links {
     padding: 0;
     margin: 0;
     list-style: none;
+    text-align: center;
 }
 
-.box .icon li {
+.project_links li {
     display: inline-block;
     margin: 0 4px;
 }
 
-.box .icon li a {
+.project_links li a {
+    background: transparent;
     color: #fff;
     font-size: 1rem;
     line-height: 2rem;
     height: 2rem;
-    width: 7rem;
+    width: 5rem;
     border: 2px solid #fff;
     border-radius: 10px 0 10px 0;
     display: block;
@@ -401,7 +436,7 @@ footer a {
     text-decoration: none;
 }
 
-.box .icon li a:hover {
+.project_links li a:hover {
     color: #008a9c;
     background: #fff;
     border-radius: 0 10px 0 10px;
@@ -413,6 +448,20 @@ footer a {
     }
 }
 
+.my_modal {
+    background: rgba(0, 0, 0, 0.404);
+}
+
+.my_modal-content {
+    background: #0f5774ad;
+}
+
+#container__contact {
+    background-image: linear-gradient(to bottom, #0b475f, #0e3b4d, #0f2f3c, #0e232c, #0c181d);
+    color: var(--primary);
+    min-height: calc(100vh - 104px);
+}
+
 .form__input {
     height: 3rem;
 }
@@ -420,7 +469,7 @@ footer a {
 textarea, .form__input {
     width: 70%;
     margin-bottom: 1rem;
-    background: var(--bg-green);
+    background: linear-gradient(var(--bg-green), var(--greenLight));
     color: white;
     border-radius: .5rem;
     border: none;
@@ -704,4 +753,32 @@ form button:hover {
     left: 10px;
     position: absolute;
     width: 180px;
+}
+
+.social_icons {
+    color: var(--primary);
+}
+
+.social_icons:hover {
+    color: var(--greenLight);
+}
+
+footer {
+    color: white;
+    font-size: 1rem;
+    background: var(--greenDark);
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    padding-right: 20px;
+    position: relative;
+    z-index: 999;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--primary);
 }

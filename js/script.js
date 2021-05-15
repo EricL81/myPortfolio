@@ -204,3 +204,15 @@ function canvas2() {
 
 canvas2();
 
+document.getElementById('tab1').addEventListener('click', function (){document.getElementById('aboutme').scrollIntoView()});
+document.getElementById('tab2').addEventListener('click', function (){document.getElementById('container__projects').scrollIntoView()});
+document.getElementById('tab3').addEventListener('click', function (){document.getElementById('container__contact').scrollIntoView()});
+
+function toggleMenu(){
+    let icon = document.getElementById('burger-icon');
+    if (icon.getAttribute('class') == 'icon'){
+        icon.setAttribute('class','icon-close');
+    } else {
+        icon.setAttribute('class','icon');
+    }
+}
