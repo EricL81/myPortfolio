@@ -90,8 +90,6 @@ function canvas1() {
 
     function animate() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        //ctx.fillStyle = 'rgba(0,0,0,0.02)';
-        //ctx.fillRect(0, 0, canvas.width, canvas.height);
         handleParticles();
         frame++;
         requestAnimationFrame(animate);
@@ -193,8 +191,6 @@ function canvas2() {
 
     function animate() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        //ctx.fillStyle = 'rgba(0,0,0,0.02)';
-        //ctx.fillRect(0, 0, canvas.width, canvas.height);
         handleParticles();
         frame++;
         requestAnimationFrame(animate);
@@ -216,3 +212,4 @@ function toggleMenu(){
         icon.setAttribute('class','icon');
     }
 }
+
