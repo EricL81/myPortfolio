@@ -316,6 +316,15 @@ nav button {
     }
 }
 
+@-moz-keyframes spin {
+    from {
+        -webkit-transform: rotate(0deg)
+    }
+    to {
+        -webkit-transform: rotate(360deg)
+    }
+}
+
 #projects {
     justify-content: center;
 }
@@ -433,6 +442,19 @@ nav button {
     display: block;
     transition: all 0.3s;
     text-decoration: none;
+}
+
+@media only screen and (max-width: 576px) {
+    .project_links li a {
+        font-size: 0.75rem;
+        line-height: 1.5rem;
+        height: 1.5rem;
+        width: 3.5rem;
+    }
+    .box .title {
+        font-size: 1rem;
+        font-weight: 600;
+    }
 }
 
 .project_links li a:hover {
