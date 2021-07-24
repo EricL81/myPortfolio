@@ -15,6 +15,8 @@ Even though I used some Javascript animations from Codepens, I modified the code
 
 I also created the Logo/favicon myself as I wanted something personalized (the logo is my first name) but also related to technology, coding, web development.
 
+<br>
+
 ## Tech practiced: 
 
    - Landing-Page Portfolio
