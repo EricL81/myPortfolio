@@ -15,6 +15,8 @@ Even though I used some Javascript animations from Codepens, I modified the code
 
 I also created the Logo/favicon myself as I wanted something personalized (the logo is my first name) but also related to technology, coding, web development.
 
+## Tech practiced: 
+
    - Landing-Page Portfolio
    - CSS issues solved with JS
    - Research of Web Design
@@ -43,16 +45,16 @@ I also created the Logo/favicon myself as I wanted something personalized (the l
 
 ## Snapshots:
 
-![](myportfolio1.png)  
+![](css/myportfolio1.png)  
 
 <br>  
 
-![](myportfolio2.png)  
+![](css/myportfolio2.png)  
 
 <br>  
 
-![](myportfolio3.png)  
+![](css/myportfolio3.png)  
 
 <br>  
 
-![](myportfolio4.png)  
+![](css/myportfolio4.png)  
