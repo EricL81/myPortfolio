@@ -642,9 +642,9 @@ form button:hover {
     animation: animateBubble 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
     left: 5%;
     top: 80%;
-    -webkit-transform: scale(0.5);
-    -moz-transform: scale(0.5);
-    transform: scale(0.5);
+    -webkit-transform: scale(0.6);
+    -moz-transform: scale(0.6);
+    transform: scale(0.6);
 }
 
 .x3 {
@@ -664,9 +664,9 @@ form button:hover {
     animation: animateBubble 23s linear infinite, sideWays 3s ease-in-out infinite alternate;
     left: 20%;
     top: 0;
-    -webkit-transform: scale(0.4);
-    -moz-transform: scale(0.4);
-    transform: scale(0.4);
+    -webkit-transform: scale(0.5);
+    -moz-transform: scale(0.5);
+    transform: scale(0.5);
 }
 
 .x5 {
@@ -708,9 +708,9 @@ form button:hover {
     animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
     left: 80%;
     top: 10%;
-    -webkit-transform: scale(0.4);
-    -moz-transform: scale(0.4);
-    transform: scale(0.4);
+    -webkit-transform: scale(0.55);
+    -moz-transform: scale(0.55);
+    transform: scale(0.55);
 }
 
 .x9 {
@@ -725,10 +725,10 @@ form button:hover {
 }
 
 .x10 {
-    -webkit-animation: animateBubble 21s linear infinite, sideWays 2s ease-in-out infinite alternate;
-    -moz-animation: animateBubble 21s linear infinite, sideWays 2s ease-in-out infinite alternate;
-    animation: animateBubble 21s linear infinite, sideWays 2s ease-in-out infinite alternate;
-    left: 80%;
+    -webkit-animation: animateBubble 18s linear infinite, sideWays 2s ease-in-out infinite alternate;
+    -moz-animation: animateBubble 18s linear infinite, sideWays 2s ease-in-out infinite alternate;
+    animation: animateBubble 18s linear infinite, sideWays 2s ease-in-out infinite alternate;
+    left: 70%;
     top: 80%;
     -webkit-transform: scale(0.5);
     -moz-transform: scale(0.5);
@@ -752,9 +752,31 @@ form button:hover {
     animation: animateBubble 29s linear infinite, sideWays 2s ease-in-out infinite alternate;
     left: 60%;
     top: 90%;
-    -webkit-transform: scale(0.5);
-    -moz-transform: scale(0.5);
-    transform: scale(0.5);
+    -webkit-transform: scale(0.75);
+    -moz-transform: scale(0.75);
+    transform: scale(0.75);
+}
+
+.x13 {
+    -webkit-animation: animateBubble 30s linear infinite, sideWays 2s ease-in-out infinite alternate;
+    -moz-animation: animateBubble 30s linear infinite, sideWays 2s ease-in-out infinite alternate;
+    animation: animateBubble 30s linear infinite, sideWays 2s ease-in-out infinite alternate;
+    left: 40%;
+    top: 30%;
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    transform: scale(0.9);
+}
+
+.x14 {
+    -webkit-animation: animateBubble 15s linear infinite, sideWays 2s ease-in-out infinite alternate;
+    -moz-animation: animateBubble 15s linear infinite, sideWays 2s ease-in-out infinite alternate;
+    animation: animateBubble 15s linear infinite, sideWays 2s ease-in-out infinite alternate;
+    left: 25%;
+    top: 0;
+    -webkit-transform: scale(0.85);
+    -moz-transform: scale(0.85);
+    transform: scale(0.85);
 }
 
 /* OBJECTS */
