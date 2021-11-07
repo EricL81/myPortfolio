@@ -297,11 +297,14 @@ nav button {
     width: 200%;
     height: 200%;
     transform: scale(2);
-    -webkit-transform: scale(2);
+    /*     -webkit-transform: scale(2);
+ */
     transform-origin: center;
-    -webkit-transform-origin: center;
+    /*     -webkit-transform-origin: center;
+ */
     animation: spin 150s linear infinite;
-    -webkit-animation: spin 150s linear infinite;
+    /*     -webkit-animation: spin 150s linear infinite;
+ */
 }
 
 @keyframes spin {
