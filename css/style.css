@@ -16,7 +16,6 @@
 
 body, #my-navbar {
     background: var(--bg-green);
-    ;
     font-family: 'Montserrat Alternates', sans-serif;
 }
 
@@ -28,9 +27,37 @@ header h1 {
     font-size: 8vw;
 }
 
-header #junior_FS_dev {
-    font-size: 4vw;
+header #FS_dev {
     z-index: 99;
+}
+
+header #FS_dev p {
+    display: inline-block;
+    font-size: 4vw;
+    border-right: 2px solid;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3.5s steps(20) forwards, cursor .5s step-end infinite alternate;
+}
+
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%
+    }
+}
+
+@keyframes cursor {
+    0%, 100% {
+        border-right: 2px solid transparent;
+    }
+
+    50% {
+        border-right: 2px solid var(--greyDark);
+    }
 }
 
 .hero {
@@ -57,6 +84,7 @@ header #junior_FS_dev {
 
 #me {
     max-width: 350px;
+    border-radius: 50%;
     z-index: 99;
 }
 
@@ -64,6 +92,10 @@ header #junior_FS_dev {
     #me {
         max-width: 250px;
     }
+}
+
+#me img {
+    border-radius: 50%;
 }
 
 #bg-canvas1 {
@@ -107,7 +139,7 @@ nav button {
 
 .icon {
     font-family: "Anicons Regular", sans-serif;
-    font-variation-settings: "TIME" 1;
+    font-variation-settings: "TIME"1;
     transition: font-variation-settings 0.4s ease;
     color: var(--primary);
     font-size: 2rem;
@@ -115,7 +147,7 @@ nav button {
 
 .icon-close {
     font-family: "Anicons Regular", sans-serif;
-    font-variation-settings: "TIME" 100;
+    font-variation-settings: "TIME"100;
     transition: font-variation-settings 0.4s ease;
     color: var(--primary);
     font-size: 2rem;
@@ -244,6 +276,12 @@ nav button {
     overflow-x: hidden;
     z-index: -1;
     scroll-margin-top: 76px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+#aboutme::-webkit-scrollbar {
+    display: none;
 }
 
 #aboutme__text p {
@@ -285,8 +323,8 @@ nav button {
 #container__projects::before {
     content: " ";
     position: absolute;
-    left: -50%;
-    top: -50%;
+    left: 0;
+    /* top: -50%; */
     z-index: -1;
     background-image: url(../css/cyber-bg.png);
     opacity: 0.5;
@@ -294,23 +332,21 @@ nav button {
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
-    width: 200%;
-    height: 200%;
-    transform: scale(2);
-    /*     -webkit-transform: scale(2);
- */
-    transform-origin: center;
-    /*     -webkit-transform-origin: center;
- */
-    animation: spin 150s linear infinite;
-    /*     -webkit-animation: spin 150s linear infinite;
- */
+    width: 100%;
+    height: 100%;
+    /* transform: scale(2); */
+    /*     -webkit-transform: scale(2);*/
+    /* transform-origin: center; */
+    /*     -webkit-transform-origin: center;*/
+    /* animation: spin 150s linear infinite; */
+    /*     -webkit-animation: spin 150s linear infinite;*/
 }
 
 @keyframes spin {
     from {
         transform: rotate(0deg)
     }
+
     to {
         transform: rotate(360deg)
     }
@@ -320,6 +356,7 @@ nav button {
     from {
         -webkit-transform: rotate(0deg)
     }
+
     to {
         -webkit-transform: rotate(360deg)
     }
@@ -329,6 +366,7 @@ nav button {
     from {
         -webkit-transform: rotate(0deg)
     }
+
     to {
         -webkit-transform: rotate(360deg)
     }
@@ -344,6 +382,11 @@ nav button {
     border-radius: 25px 0;
     position: relative;
     overflow: hidden;
+}
+
+.box:hover {
+    border-radius: 0 25px;
+    transition: all 0.25s linear;
 }
 
 .box img {
@@ -460,6 +503,7 @@ nav button {
         height: 1.5rem;
         width: 3.5rem;
     }
+
     .box .title {
         font-size: 1rem;
         font-weight: 600;
@@ -576,6 +620,7 @@ form button:hover {
     0% {
         margin-top: 1000px;
     }
+
     100% {
         margin-top: -100%;
     }
@@ -585,6 +630,7 @@ form button:hover {
     0% {
         margin-top: 1000px;
     }
+
     100% {
         margin-top: -100%;
     }
@@ -594,6 +640,7 @@ form button:hover {
     0% {
         margin-top: 1000px;
     }
+
     100% {
         margin-top: -100%;
     }
@@ -603,6 +650,7 @@ form button:hover {
     0% {
         margin-left: 0px;
     }
+
     100% {
         margin-left: 50px;
     }
@@ -612,6 +660,7 @@ form button:hover {
     0% {
         margin-left: 0px;
     }
+
     100% {
         margin-left: 50px;
     }
@@ -621,6 +670,7 @@ form button:hover {
     0% {
         margin-left: 0px;
     }
+
     100% {
         margin-left: 50px;
     }
@@ -812,7 +862,7 @@ form button:hover {
     /* IE10+ */
     background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 70%);
     /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80ffffff', endColorstr='#00ffffff', GradientType=1);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80ffffff', endColorstr='#00ffffff', GradientType=1);
     /* IE6-9 fallback on horizontal gradient */
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -839,6 +889,7 @@ form button:hover {
     .social_icons i {
         font-size: 2rem;
     }
+
     .social-medias p {
         font-size: 1rem;
     }
