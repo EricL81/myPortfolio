@@ -231,3 +231,43 @@ function toggleMenu() {
 		icon.setAttribute('class', 'icon');
 	}
 }
+
+function setupIntersectionObserver() {
+	const sections = ['hero', 'aboutme', 'container__projects', 'container__contact'];
+	const navTabs = {
+		hero: document.getElementById('tab-0'),
+		aboutme: document.getElementById('tab-1'),
+		container__projects: document.getElementById('tab-2'),
+		container__contact: document.getElementById('tab-3'),
+	};
+
+	const observerOptions = {
+		root: null,
+		rootMargin: '-50% 0px -50% 0px',
+		threshold: 0,
+	};
+
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach((entry) => {
+			if (entry.isIntersecting) {
+				// Uncheck all radio buttons
+				Object.values(navTabs).forEach((tab) => (tab.checked = false));
+
+				// Check the radio button corresponding to the visible section
+				const sectionId = entry.target.id;
+				if (navTabs[sectionId]) {
+					navTabs[sectionId].checked = true;
+				}
+			}
+		});
+	}, observerOptions);
+
+	sections.forEach((sectionId) => {
+		const section = document.getElementById(sectionId);
+		if (section) {
+			observer.observe(section);
+		}
+	});
+}
+
+document.addEventListener('DOMContentLoaded', setupIntersectionObserver);

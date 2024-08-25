@@ -332,6 +332,8 @@ nav button {
     overflow: hidden;
     min-height: calc(100vh - 74px);
     scroll-margin-top: 74px;
+    display: flex;
+    flex-direction: column
 }
 
 #container__projects::before {
@@ -388,6 +390,10 @@ nav button {
 
 #projects {
     justify-content: center;
+    margin: 1rem auto;
+    width: 85%;
+    max-width: 1500px;
+    flex-grow: 1;
 }
 
 .box {
