@@ -26,8 +26,16 @@
 				<button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 					<span id="burger-icon" onclick="toggleMenu()" class="icon">A</span>
 				</button>
-				<div class="collapse navbar-collapse" id="navbarNav">
-					<div class="segmented-control ms-auto">
+				<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+					<!--<div class="lightmode-toggle ms-auto me-3">
+						<label class="segmented-control switch">
+							<input type="checkbox" id="lightmode-toggle-input" />
+							<span class="slider"></span>
+							<span class="on"><i class="far fa-moon"></i></span>
+							<span class="off"><i class="far fa-sun"></i></span>
+						</label>
+					</div>-->
+					<div class="segmented-control">
 						<input type="radio" name="radio2" value="2" id="tab-0" checked="" />
 						<label id="tab0" for="tab-0" class="segmented-control__tab"> Home </label>
 
@@ -48,7 +56,10 @@
 		<header>
 			<div class="container-fluid hero d-flex flex-column justify-content-between" id="hero">
 				<div class="row d-flex hero-top justify-content-center align-items-center">
-					<div class="col-12 col-md-7 order-md-1 mt-5 mt-md-4 d-flex flex-column pt-2 justify-content-end align-items-center align-items-md-start text-white hero-text">
+					<div class="col-12 col-md-7 mt-5 mt-md-4 d-flex flex-column pt-2 justify-content-end align-items-center align-items-md-start text-white hero-text">
+						<div id="hello" class="mt-1 pb-xl-2 ms-1">
+							<p>Hello, I'm</p>
+						</div>
 						<div class="d-flex flex-md-column">
 							<h1 class="text-clip px-2">ERIC</h1>
 							<h1 class="text-clip px-2 mb-2">LEHMANN</h1>
@@ -57,9 +68,11 @@
 							<p>Full-Stack Developer</p>
 						</div>
 					</div>
-					<div class="col-12 col-md-3 mt-2 d-flex justify-content-center align-items-end">
+					<div class="col-12 col-md-4 mt-2 d-flex justify-content-center align-items-end">
 						<div id="me">
-							<img src="/css/me2.webp" class="img-fluid" alt="me.png" />
+							<img src="/css/blob.png" class="blob1" alt="blob1" />
+							<img src="/css/blob.png" class="blob2" alt="blob2" />
+							<img src="/css/profile-pic.webp" class="img-fluid profile-pic" alt="profile-pic" />
 						</div>
 					</div>
 				</div>
