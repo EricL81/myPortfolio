@@ -42,7 +42,7 @@ header h1 {
     margin-bottom: 0;
     line-height: 80%;
     padding: 1rem;
-    font-size: 7.5vw;
+    font-size: 6vw;
 }
 
 header #FS_dev {
@@ -52,7 +52,7 @@ header #FS_dev {
 header p {
     display: inline-block;
     position: relative;
-    font-size: 4vw;
+    font-size: 3.75vw;
     white-space: nowrap;
     overflow: hidden;
     padding-right: .5rem;
@@ -112,7 +112,7 @@ header p::before {
 
 @media (min-width: 768px) {
     .hero-top {
-        padding: 100px 5% 5% 8%;
+        padding: 100px 5% 15px 8%;
         margin: 0
     }
 }
@@ -152,7 +152,7 @@ header p::before {
 
 @media only screen and (max-width:768px) {
     #me {
-        max-width: 300px;
+        max-width: 250px;
         margin-top: 3rem;
     }
 }
