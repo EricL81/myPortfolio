@@ -1,3 +1,4 @@
+// Hero Fractals Canvas1 - Color
 function canvas1() {
 	const canvas = document.getElementById('canvas1');
 	const ctx = canvas.getContext('2d');
@@ -98,6 +99,7 @@ function canvas1() {
 
 canvas1();
 
+// Hero Fractals Canvas2 - White
 function canvas2() {
 	const canvas = document.getElementById('canvas2');
 	const ctx = canvas.getContext('2d');
@@ -198,6 +200,7 @@ function canvas2() {
 
 canvas2();
 
+// Menu Navbar - Handle Click & Scroll
 document.getElementById('tab0').addEventListener('click', function () {
 	scrollToSection('hero');
 });
@@ -213,7 +216,7 @@ document.getElementById('tab3').addEventListener('click', function () {
 
 function scrollToSection(sectionId) {
 	const element = document.getElementById(sectionId);
-	const headerOffset = 74;
+	const headerOffset = window.innerWidth >= 768 ? 74 : 48;
 	const elementPosition = element.getBoundingClientRect().top;
 	const offsetPosition = elementPosition + window.scrollY - headerOffset;
 
@@ -225,7 +228,7 @@ function scrollToSection(sectionId) {
 
 function toggleMenu() {
 	let icon = document.getElementById('burger-icon');
-	if (icon.getAttribute('class') == 'icon') {
+	if (icon.getAttribute('class') === 'icon') {
 		icon.setAttribute('class', 'icon-close');
 	} else {
 		icon.setAttribute('class', 'icon');
@@ -271,3 +274,27 @@ function setupIntersectionObserver() {
 }
 
 document.addEventListener('DOMContentLoaded', setupIntersectionObserver);
+
+// LightMode Toggle Switch
+const toggleSwitch = document.getElementById('lightmode-toggle-input');
+const currentTheme = localStorage.getItem('theme');
+
+if (currentTheme) {
+	document.documentElement.setAttribute('data-theme', currentTheme);
+
+	if (currentTheme === 'light') {
+		toggleSwitch.checked = true;
+	}
+}
+
+function switchTheme(e) {
+	if (e.target.checked) {
+		document.documentElement.setAttribute('data-theme', 'light');
+		localStorage.setItem('theme', 'light');
+	} else {
+		document.documentElement.setAttribute('data-theme', 'dark');
+		localStorage.setItem('theme', 'dark');
+	}
+}
+
+toggleSwitch.addEventListener('change', switchTheme, false);
