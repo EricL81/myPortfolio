@@ -60,6 +60,7 @@ header p {
 
 header #hello p {
     animation: typing 1.5s steps(10) forwards;
+    margin-bottom: 0;
 }
 
 header #FS_dev p {
@@ -117,9 +118,19 @@ header p::before {
     }
 }
 
-.row2 {
+.hero-btm {
     z-index: 99;
     text-align: center;
+}
+
+.hero-btm h6 {
+    font-size: .67rem;
+}
+
+@media (min-width: 576px) {
+    .hero-btm h6 {
+        font-size: 1rem;
+    }
 }
 
 .text-clip {
@@ -129,8 +140,14 @@ header p::before {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 2px var(--primary);
+    -webkit-text-stroke: 1px var(--primary);
     z-index: 99;
+}
+
+@media (min-width: 768px) {
+    .text-clip {
+        -webkit-text-stroke: 2px var(--primary);
+    }
 }
 
 [data-theme="light"] .text-clip {
@@ -152,8 +169,8 @@ header p::before {
 
 @media only screen and (max-width:768px) {
     #me {
-        max-width: 250px;
-        margin-top: 3rem;
+        max-width: 200px;
+        margin-top: 1.5rem;
     }
 }
 
@@ -221,6 +238,32 @@ nav button {
     color: transparent !important;
 }
 
+.navbar-brand {
+    padding: 0;
+}
+
+.navbar-brand img {
+    width: 24px;
+    height: 24px;
+}
+
+@media (min-width: 768px) {
+    .navbar-brand img {
+        width: 48px;
+        height: 48px;
+    }
+}
+
+.navbar a.navbar-brand:nth-of-type(2) {
+    font-size: .85rem;
+}
+
+@media (min-width: 768px) {
+    .navbar a.navbar-brand:nth-of-type(2) {
+        font-size: 1.25rem;
+    }
+}
+
 .icon {
     font-family: "Anicons Regular", sans-serif;
     font-variation-settings: "TIME"1;
@@ -277,12 +320,12 @@ nav button {
 
 [data-theme="light"] .lightmode-toggle .slider {
     box-shadow: -2px -2px 8px rgba(255, 255, 255, 1),
-        -2px -2px 12px rgba(255, 255, 255, 0.5),
-        inset -2px -2px 8px rgba(255, 255, 255, 1),
-        inset -2px -2px 12px rgba(255, 255, 255, 0.5),
-        inset 2px 2px 4px rgba(255, 255, 255, 0.1),
-        inset 2px 2px 8px rgba(0, 0, 0, .3),
-        2px 2px 8px rgba(0, 0, 0, .3);
+    -2px -2px 12px rgba(255, 255, 255, 0.5),
+    inset -2px -2px 8px rgba(255, 255, 255, 1),
+    inset -2px -2px 12px rgba(255, 255, 255, 0.5),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.1),
+    inset 2px 2px 8px rgba(0, 0, 0, .3),
+    2px 2px 8px rgba(0, 0, 0, .3);
     background-color: #ecf0f3;
 }
 
@@ -302,9 +345,9 @@ nav button {
 
 [data-theme="light"] .lightmode-toggle .slider:before {
     box-shadow: -2px -2px 8px rgba(255, 255, 255, 1),
-        -2px -2px 12px rgba(255, 255, 255, 0.5),
-        inset 2px 2px 4px rgba(255, 255, 255, 0.1),
-        2px 2px 8px rgba(0, 0, 0, .3);
+    -2px -2px 12px rgba(255, 255, 255, 0.5),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.1),
+    2px 2px 8px rgba(0, 0, 0, .3);
 }
 
 .lightmode-toggle .off {
@@ -390,12 +433,12 @@ nav button {
 
 [data-theme="light"] .segmented-control {
     box-shadow: -2px -2px 8px rgba(255, 255, 255, 1),
-        -2px -2px 12px rgba(255, 255, 255, 0.5),
-        inset -2px -2px 8px rgba(255, 255, 255, 1),
-        inset -2px -2px 12px rgba(255, 255, 255, 0.5),
-        inset 2px 2px 4px rgba(255, 255, 255, 0.1),
-        inset 2px 2px 8px rgba(0, 0, 0, .3),
-        2px 2px 8px rgba(0, 0, 0, .3);
+    -2px -2px 12px rgba(255, 255, 255, 0.5),
+    inset -2px -2px 8px rgba(255, 255, 255, 1),
+    inset -2px -2px 12px rgba(255, 255, 255, 0.5),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.1),
+    inset 2px 2px 8px rgba(0, 0, 0, .3),
+    2px 2px 8px rgba(0, 0, 0, .3);
     background-color: #ecf0f3;
 }
 
@@ -443,9 +486,9 @@ nav button {
 
 [data-theme="light"] .segmented-control input+label::before {
     box-shadow: -2px -2px 8px rgba(255, 255, 255, 1),
-        -2px -2px 12px rgba(255, 255, 255, 0.5),
-        inset 2px 2px 4px rgba(255, 255, 255, 0.1),
-        2px 2px 8px rgba(0, 0, 0, .3);
+    -2px -2px 12px rgba(255, 255, 255, 0.5),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.1),
+    2px 2px 8px rgba(0, 0, 0, .3);
 }
 
 .segmented-control input:checked+label::before {
@@ -455,7 +498,13 @@ nav button {
 
 .section_title {
     font-family: 'Montserrat Subrayada', sans-serif;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .section_title {
+        font-size: 2.5rem;
+    }
 }
 
 #aboutme {
@@ -469,9 +518,38 @@ nav button {
     scrollbar-width: none;
 }
 
+#aboutme .background-wrap {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
 #aboutme::-webkit-scrollbar {
     display: none;
 }
+
+#aboutme .aboutme-content {
+    width: 100%;
+    max-width: 950px;
+    margin: auto;
+}
+
+#aboutme .aboutme-content #aboutme__text {
+    color: #fff;
+    font-size: .75rem;
+}
+
+@media (min-width: 768px) {
+    #aboutme .aboutme-content #aboutme__text {
+        font-size: 1rem;
+    }
+}
+
+
+
+
 
 #aboutme__text p {
     font-size: larger;
@@ -693,15 +771,19 @@ nav button {
 
 @media only screen and (max-width: 576px) {
     .project_links li a {
-        font-size: 0.75rem;
+        font-size: 0.67rem;
         line-height: 1.5rem;
         height: 1.5rem;
         width: 3.5rem;
     }
 
     .box .title {
-        font-size: 1rem;
+        font-size: .7rem;
         font-weight: 600;
+    }
+
+    .box .post {
+        font-size: .6rem;
     }
 }
 
@@ -771,11 +853,14 @@ textarea, .form__input {
     color: white;
     border-radius: .5rem;
     border: none;
-    padding-top: .5rem;
     padding-left: 1rem;
     font-size: 1.4rem;
     -webkit-box-shadow: inset 0.2rem 0.2rem 0.5rem rgb(14, 14, 14), inset -0.2rem -0.2rem 0.5rem var(--greenLight);
     box-shadow: inset 0.2rem 0.2rem 0.5rem rgb(14, 14, 14), inset -0.2rem -0.2rem 0.5rem var(--greenLight);
+}
+
+textarea {
+    padding-top: .5rem;
 }
 
 
@@ -795,6 +880,8 @@ textarea:not(:placeholder-shown):invalid,
 
 textarea::placeholder, .form__input::placeholder {
     color: #8B818C;
+    font-size: 14px;
+    vertical-align: middle;
 }
 
 form button {
@@ -819,7 +906,7 @@ form button:active {
 }
 
 form button:hover {
-    color: white;
+    color: var(--primary);
 }
 
 #background-wrap {
@@ -1094,6 +1181,32 @@ form button:hover {
     width: 180px;
 }
 
+/* END */
+
+a.myCV {
+    text-decoration: none;
+}
+
+a.myCV span {
+    font-size: .75rem;
+}
+
+a.myCV img {
+    width: 80px;
+    height: 80px;
+}
+
+@media (min-width:768px) {
+    a.myCV span {
+        font-size: 1rem;
+    }
+
+    a.myCV img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
 .social_icons {
     color: var(--primary);
 }
@@ -1104,7 +1217,7 @@ form button:hover {
 
 @media only screen and (max-width:768px) {
     .social_icons i {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .social-medias p {
@@ -1114,7 +1227,7 @@ form button:hover {
 
 footer {
     color: white;
-    font-size: 1rem;
+    font-size: .75rem;
     background: var(--greenDark);
     left: 0;
     bottom: 0;
@@ -1122,9 +1235,15 @@ footer {
     text-align: center;
     height: 30px;
     line-height: 30px;
-    padding-right: 20px;
+    padding-inline: 15px;
     position: relative;
     z-index: 999;
+}
+
+@media (min-width: 768px) {
+    footer {
+        font-size: 1rem;
+    }
 }
 
 footer a {
