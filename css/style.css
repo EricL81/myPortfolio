@@ -38,8 +38,19 @@ body, #my-navbar {
 }
 
 header {
+    position: relative;
+}
+
+#hero {
     background: var(--bg-green);
     position: relative;
+    min-height: calc(100vh - 48px);
+}
+
+@media (min-width: 768px) {
+    #hero {
+        min-height: calc(100vh - 74px);
+    }
 }
 
 header h1 {
@@ -104,21 +115,16 @@ header p::before {
     }
 }
 
-.hero {
-    position: relative;
-    min-height: 100vh;
-}
-
 .hero-top {
     width: 100%;
     max-width: 2400px;
-    padding: 12% 8% 5% 8%;
+    padding: 10% 8% 5% 8%;
     margin: 0;
 }
 
 @media (min-width: 768px) {
     .hero-top {
-        padding: 100px 5% 15px 8%;
+        padding: 100px 5% 20px 5%;
     }
 }
 
@@ -164,17 +170,24 @@ header p::before {
 }
 
 #me {
-    max-width: 600px;
+    max-width: 200px;
     border-radius: 50%;
     z-index: 99;
     position: relative;
     width: 100%;
+    margin-top: 1.5rem;
 }
 
-@media only screen and (max-width:768px) {
+@media (min-width:576px) {
     #me {
-        max-width: 200px;
-        margin-top: 1.5rem;
+        max-width: 300px;
+    }
+}
+
+@media (min-width:768px) {
+    #me {
+        max-width: 500px;
+        margin-top: 0;
     }
 }
 
