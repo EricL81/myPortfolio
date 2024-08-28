@@ -3,17 +3,17 @@
     --bg-green: #062633;
     --greenLight: #0f5774;
     --greenDark: #0c181d;
-    --greyDark: #9baacf;
+    --grey: #9baacf;
     --clr-neon: #ccff6b;
     --clr-bg: hsl(198, 41%, 8%);
 }
 
 [data-theme="light"] {
-    --primary: #0f5774;
+    --primary: #ccff6b;
     --bg-green: #ecf0f3;
     --greenLight: #0f5774;
     --greenDark: #0c181d;
-    --greyDark: #9baacf;
+    --grey: #9baacf;
     --clr-neon: #f6bd00;
     --clr-bg: hsl(198, 41%, 8%);
 }
@@ -77,10 +77,12 @@ header p {
 header #hello p {
     animation: typing 1.5s steps(10) forwards;
     margin-bottom: 0;
+    z-index: 99;
 }
 
 header #FS_dev p {
     animation: typing 3.5s steps(20) forwards;
+    z-index: 99;
 }
 
 header p::before {
@@ -218,17 +220,18 @@ header p::before {
 }
 
 #bg-canvas1 {
-    clip-path: polygon(50% 0%, 100% 0, 100% 60%, 0% 100%, 0 100%, 0 0);
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 80%);
     position: absolute;
     top: 0;
     left: 0;
+    background: linear-gradient(to bottom, var(--bg-green) 0%, var(--greenDark) 80%);
 }
 
 #bg-canvas2 {
-    background: #0c181d;
-    clip-path: polygon(100% 45%, 0% 100%, 100% 100%);
+    background: var(--greenDark);
+    clip-path: polygon(100% 80%, 100% 100%, 0% 100%, 0% 80%);
     position: absolute;
-    top: 0rem;
+    top: 0;
     left: 0;
 }
 
@@ -513,7 +516,7 @@ nav button {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    color: var(--greyDark);
+    color: var(--grey);
     transition: all 0.5s ease;
 }
 
@@ -684,26 +687,6 @@ nav button {
 
     to {
         transform: rotate(360deg)
-    }
-}
-
-@-webkit-keyframes spin {
-    from {
-        -webkit-transform: rotate(0deg)
-    }
-
-    to {
-        -webkit-transform: rotate(360deg)
-    }
-}
-
-@-moz-keyframes spin {
-    from {
-        -webkit-transform: rotate(0deg)
-    }
-
-    to {
-        -webkit-transform: rotate(360deg)
     }
 }
 
@@ -912,6 +895,10 @@ h4 {
     }
 }
 
+[data-theme="light"] #container__contact {
+    background: linear-gradient(var(--bg-green), var(--greenLight));
+}
+
 
 #container__contact .row {
     max-width: 1200px;
@@ -1027,7 +1014,7 @@ form button:hover {
 
 @-webkit-keyframes sideWays {
     0% {
-        margin-left: 0px;
+        margin-left: 0;
     }
 
     100% {
@@ -1037,7 +1024,7 @@ form button:hover {
 
 @-moz-keyframes sideWays {
     0% {
-        margin-left: 0px;
+        margin-left: 0;
     }
 
     100% {
@@ -1047,7 +1034,7 @@ form button:hover {
 
 @keyframes sideWays {
     0% {
-        margin-left: 0px;
+        margin-left: 0;
     }
 
     100% {
@@ -1063,8 +1050,6 @@ form button:hover {
     animation: animateBubble 25s linear infinite, sideWays 2s ease-in-out infinite alternate;
     left: 5%;
     top: 15%;
-    -webkit-transform: scale(0.7);
-    -moz-transform: scale(0.7);
     transform: scale(0.7);
 }
 
@@ -1074,8 +1059,6 @@ form button:hover {
     animation: animateBubble 20s linear infinite, sideWays 4s ease-in-out infinite alternate;
     left: 5%;
     top: 80%;
-    -webkit-transform: scale(0.6);
-    -moz-transform: scale(0.6);
     transform: scale(0.6);
 }
 
@@ -1085,8 +1068,6 @@ form button:hover {
     animation: animateBubble 28s linear infinite, sideWays 2s ease-in-out infinite alternate;
     left: 10%;
     top: 40%;
-    -webkit-transform: scale(0.8);
-    -moz-transform: scale(0.8);
     transform: scale(0.8);
 }
 
@@ -1096,8 +1077,6 @@ form button:hover {
     animation: animateBubble 23s linear infinite, sideWays 3s ease-in-out infinite alternate;
     left: 20%;
     top: 0;
-    -webkit-transform: scale(0.5);
-    -moz-transform: scale(0.5);
     transform: scale(0.5);
 }
 
@@ -1107,8 +1086,6 @@ form button:hover {
     animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
     left: 30%;
     top: 50%;
-    -webkit-transform: scale(0.6);
-    -moz-transform: scale(0.6);
     transform: scale(0.6);
 }
 
@@ -1118,8 +1095,6 @@ form button:hover {
     animation: animateBubble 21s linear infinite, sideWays 2s ease-in-out infinite alternate;
     left: 58%;
     top: 0;
-    -webkit-transform: scale(0.9);
-    -moz-transform: scale(0.9);
     transform: scale(0.9);
 }
 
@@ -1129,8 +1104,6 @@ form button:hover {
     animation: animateBubble 20s linear infinite, sideWays 2s ease-in-out infinite alternate;
     left: 65%;
     top: 70%;
-    -webkit-transform: scale(0.5);
-    -moz-transform: scale(0.5);
     transform: scale(0.5);
 }
 
@@ -1140,8 +1113,6 @@ form button:hover {
     animation: animateBubble 22s linear infinite, sideWays 3s ease-in-out infinite alternate;
     left: 80%;
     top: 10%;
-    -webkit-transform: scale(0.55);
-    -moz-transform: scale(0.55);
     transform: scale(0.55);
 }
 
@@ -1151,8 +1122,6 @@ form button:hover {
     animation: animateBubble 29s linear infinite, sideWays 4s ease-in-out infinite alternate;
     left: 90%;
     top: 50%;
-    -webkit-transform: scale(0.7);
-    -moz-transform: scale(0.7);
     transform: scale(0.7);
 }
 
@@ -1162,8 +1131,6 @@ form button:hover {
     animation: animateBubble 18s linear infinite, sideWays 2s ease-in-out infinite alternate;
     left: 70%;
     top: 80%;
-    -webkit-transform: scale(0.5);
-    -moz-transform: scale(0.5);
     transform: scale(0.5);
 }
 
@@ -1173,8 +1140,6 @@ form button:hover {
     animation: animateBubble 26s linear infinite, sideWays 2s ease-in-out infinite alternate;
     left: 70%;
     top: 80%;
-    -webkit-transform: scale(0.6);
-    -moz-transform: scale(0.6);
     transform: scale(0.6);
 }
 
@@ -1184,8 +1149,6 @@ form button:hover {
     animation: animateBubble 29s linear infinite, sideWays 2s ease-in-out infinite alternate;
     left: 60%;
     top: 90%;
-    -webkit-transform: scale(0.75);
-    -moz-transform: scale(0.75);
     transform: scale(0.75);
 }
 
@@ -1195,8 +1158,6 @@ form button:hover {
     animation: animateBubble 30s linear infinite, sideWays 2s ease-in-out infinite alternate;
     left: 40%;
     top: 30%;
-    -webkit-transform: scale(0.9);
-    -moz-transform: scale(0.9);
     transform: scale(0.9);
 }
 
@@ -1206,8 +1167,6 @@ form button:hover {
     animation: animateBubble 15s linear infinite, sideWays 2s ease-in-out infinite alternate;
     left: 25%;
     top: 0;
-    -webkit-transform: scale(0.85);
-    -moz-transform: scale(0.85);
     transform: scale(0.85);
 }
 
@@ -1217,9 +1176,9 @@ form button:hover {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    -webkit-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
-    -moz-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
+    -webkit-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0 10px 30px 5px rgba(255, 255, 255, 1);
+    -moz-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0 10px 30px 5px rgba(255, 255, 255, 1);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), inset 0 10px 30px 5px rgba(255, 255, 255, 1);
     height: 15rem;
     position: absolute;
     width: 15rem;
@@ -1229,25 +1188,9 @@ form button:hover {
 }
 
 .bubble:after {
-    background: -moz-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 70%);
-    /* FF3.6+ */
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255, 255, 255, 0.5)), color-stop(70%, rgba(255, 255, 255, 0)));
-    /* Chrome,Safari4+ */
-    background: -webkit-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 70%);
-    /* Chrome10+,Safari5.1+ */
-    background: -o-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 70%);
-    /* Opera 12+ */
-    background: -ms-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 70%);
-    /* IE10+ */
     background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 70%);
-    /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80ffffff', endColorstr='#00ffffff', GradientType=1);
-    /* IE6-9 fallback on horizontal gradient */
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
     border-radius: 50%;
-    -webkit-box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);
-    -moz-box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);
     box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);
     content: "";
     height: 180px;

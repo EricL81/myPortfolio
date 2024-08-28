@@ -3,7 +3,7 @@ function canvas1() {
 	const canvas = document.getElementById('canvas1');
 	const ctx = canvas.getContext('2d');
 	canvas.width = window.innerWidth;
-	canvas.height = window.innerHeight;
+	canvas.height = window.innerHeight - (window.innerWidth >= 768 ? 74 : 48);
 	const particlesArray = [];
 	let hue = 0;
 	let frame = 0;
@@ -104,7 +104,7 @@ function canvas2() {
 	const canvas = document.getElementById('canvas2');
 	const ctx = canvas.getContext('2d');
 	canvas.width = window.innerWidth;
-	canvas.height = window.innerHeight;
+	canvas.height = window.innerHeight - (window.innerWidth >= 768 ? 74 : 48);
 	const particlesArray = [];
 	let hue = 0;
 	let frame = 0;
