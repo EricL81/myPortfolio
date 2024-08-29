@@ -18,23 +18,23 @@
 
 <body>
 <!-- NAVBAR -->
-<nav class="navbar sticky-top navbar-expand-lg navbar-light" id="my-navbar">
+<nav class="navbar sticky-top navbar-expand-lg" id="my-navbar">
 	<div class="container-fluid">
 		<a class="navbar-brand text-info" href="#"><img src="/myLogo-150x150.png" width="150" height="150" alt="" decoding="async" /></a>
-		<a class="navbar-brand text-white" href="#">My Portfolio</a>
+		<a class="navbar-brand text1" href="#">My Portfolio</a>
 
 		<button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 			<span id="burger-icon" onclick="toggleMenu()" class="icon">A</span>
 		</button>
 		<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-			<!--<div class="lightmode-toggle ms-auto me-3">
+			<div class="lightmode-toggle ms-auto me-3">
                 <label class="segmented-control switch">
                     <input type="checkbox" id="lightmode-toggle-input" />
                     <span class="slider"></span>
                     <span class="on"><i class="far fa-moon"></i></span>
                     <span class="off"><i class="far fa-sun"></i></span>
                 </label>
-            </div>-->
+            </div>
 			<div class="segmented-control">
 				<input type="radio" name="radio2" value="2" id="tab-0" checked="" />
 				<label id="tab0" for="tab-0" class="segmented-control__tab"> Home </label>
@@ -58,14 +58,14 @@
 		<div class="row d-flex hero-top justify-content-center align-items-center">
 			<div class="col-12 col-md-7 mt-2 mt-md-4 d-flex flex-column pt-2 justify-content-end align-items-center align-items-md-start text-white hero-text">
 				<div id="hello">
-					<p>Hello, I'm</p>
+					<p class="text1">Hello, I'm</p>
 				</div>
 				<div class="d-flex flex-md-column">
 					<h1 class="text-clip px-2">ERIC</h1>
 					<h1 class="text-clip px-2 mb-2">LEHMANN</h1>
 				</div>
 				<div id="FS_dev">
-					<p>Full-Stack Developer</p>
+					<p class="text1">Full-Stack Developer</p>
 				</div>
 			</div>
 			<div class="col-12 col-md-4 mt-2 d-flex justify-content-center align-items-end">
@@ -77,7 +77,7 @@
 			</div>
 		</div>
 		<div class="row d-flex mx-0 hero-btm py-4 justify-content-center align-items-center">
-			<div class="col-10 col-md-6 col-lg-5 col-xl-4 mb-3 mb-lg-5 justify-content-center text-white">
+			<div class="col-10 col-md-6 col-lg-5 col-xl-4 mb-3 mb-lg-5 justify-content-center text1">
 				<h6 class="mb-0">
 					Welcome to my Portfolio Website ! Scroll-down or use the menu at the top to learn more about me and discover some of my projects. Feel free to contact me for any query or question by pressing the button down here. Thanks for your visit!
 				</h6>
@@ -93,11 +93,6 @@
 	<!-- CANVAS FRACTAL COLOR -->
 	<div class="canvas" id="bg-canvas1">
 		<canvas id="canvas1"></canvas>
-	</div>
-
-	<!-- CANVAS FRACTAL WHITE -->
-	<div class="canvas" id="bg-canvas2">
-		<canvas id="canvas2"></canvas>
 	</div>
 </header>
 
@@ -835,7 +830,7 @@
 		<div class="col-12 col-md-9 d-flex flex-column justify-content-center align-items-center">
 			<div class="row email__form">
 				<div class="col-12">
-					<p class="text-white">Send me an email</p>
+					<p class="text1">Send me an email</p>
 				</div>
 
 				<form id="contact" name="contact" method="POST" data-netlify="true">
@@ -856,15 +851,15 @@
 			</div>
 		</div>
 		<div class="col-12 col-md-9 mt-5 d-flex flex-column justify-content-start align-items-center">
-			<div class="text-white fs-3 social-medias">
+			<div class="text1 fs-3 social-medias">
 				<p class="mb-0">My CV</p>
 			</div>
 			<div class="col-12 d-flex justify-content-center mb-3">
 				<div class="m-3">
-					<a class="social_icons myCV d-flex flex-column align-items-center" href="https://drive.google.com/file/d/1L7TkifhFgA2b3hp_wHFAXQ3zMr17ToiL/view?usp=sharing" target="_blank"><img src="./css/myCV-2.png" alt="MyCV" width="100" height="100"/><span>Click or Scan me!</span></a>
+					<a class="social_icons myCV_qr d-flex flex-column align-items-center" href="https://drive.google.com/file/d/1L7TkifhFgA2b3hp_wHFAXQ3zMr17ToiL/view?usp=sharing" target="_blank"><img class="myCV" src="./css/myCV.png" alt="MyCV" width="100" height="100"/><img class="myCV2" src="./css/myCV2.png" alt="MyCV" width="100" height="100"/><span>Click or Scan me!</span></a>
 				</div>
 			</div>
-			<div class="text-white fs-3 social-medias">
+			<div class="text1 fs-3 social-medias">
 				<p class="m-0">Social media</p>
 			</div>
 			<div class="col-12 d-flex justify-content-center">
