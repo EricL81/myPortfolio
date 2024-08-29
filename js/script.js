@@ -82,7 +82,6 @@ function canvas1() {
 
 			if (particlesArray[i].size <= 0.3) {
 				particlesArray.splice(i, 1);
-				console.log(particlesArray.length);
 				i--;
 			}
 		}
