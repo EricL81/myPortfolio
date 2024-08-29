@@ -22,19 +22,18 @@
 	<div class="container-fluid">
 		<a class="navbar-brand text-info" href="#"><img src="/myLogo-150x150.png" width="150" height="150" alt="" decoding="async" /></a>
 		<a class="navbar-brand text1" href="#">My Portfolio</a>
-
+		<div class="lightmode-toggle ms-auto me-3">
+			<label class="segmented-control switch">
+				<input type="checkbox" id="lightmode-toggle-input" />
+				<span class="slider"></span>
+				<span class="on"><i class="far fa-moon"></i></span>
+				<span class="off"><i class="far fa-sun"></i></span>
+			</label>
+		</div>
 		<button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 			<span id="burger-icon" onclick="toggleMenu()" class="icon">A</span>
 		</button>
 		<div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-			<div class="lightmode-toggle ms-auto me-3">
-                <label class="segmented-control switch">
-                    <input type="checkbox" id="lightmode-toggle-input" />
-                    <span class="slider"></span>
-                    <span class="on"><i class="far fa-moon"></i></span>
-                    <span class="off"><i class="far fa-sun"></i></span>
-                </label>
-            </div>
 			<div class="segmented-control">
 				<input type="radio" name="radio2" value="2" id="tab-0" checked="" />
 				<label id="tab0" for="tab-0" class="segmented-control__tab"> Home </label>
