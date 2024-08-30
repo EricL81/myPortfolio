@@ -47,16 +47,16 @@ I also created the Logo/favicon myself as I wanted something personalized (the l
 
 ## Snapshots:
 
-![](css/projects/myportfolio1.png)  
+![](css/projects/myportfolio1.webp)  
 
 <br>  
 
-![](css/projects/myportfolio2.png)  
+![](css/projects/myportfolio2.webp)  
 
 <br>  
 
-![](css/projects/myportfolio3.png)  
+![](css/projects/myportfolio3.webp)  
 
 <br>  
 
-![](css/projects/myportfolio4.png)  
+![](css/projects/myportfolio4.webp)  
