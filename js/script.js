@@ -159,6 +159,12 @@ function setupIntersectionObserver() {
 				if (navTabs[sectionId]) {
 					navTabs[sectionId].checked = true;
 				}
+
+				if (sectionId === 'container__contact') {
+					document.getElementById('hero-socials-dk').style.opacity = '0';
+				} else {
+					document.getElementById('hero-socials-dk').style.opacity = '1';
+				}
 			}
 		});
 	}, observerOptions);
@@ -172,6 +178,28 @@ function setupIntersectionObserver() {
 }
 
 document.addEventListener('DOMContentLoaded', setupIntersectionObserver);
+
+
+
+const fadeInUpElements = document.querySelectorAll('.fadeInUp-element');
+
+const observerCallbackFadeInUp = (entries, observerFadeInUp) => {
+	entries.forEach(entry => {
+		if (entry.isIntersecting) {
+			entry.target.classList.add('fadeInUp');
+		}
+	});
+};
+
+const observerFadeInUpOptions = {
+	threshold: 0
+};
+
+const observerFadeInUp = new IntersectionObserver(observerCallbackFadeInUp, observerFadeInUpOptions);
+
+fadeInUpElements.forEach(fadeInUpElement => {
+	observerFadeInUp.observe(fadeInUpElement);
+});
 
 // LightMode Toggle Switch
 const toggleSwitch = document.getElementById('lightmode-toggle-input');

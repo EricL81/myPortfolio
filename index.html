@@ -54,34 +54,47 @@
 <!-- HERO W/ FRACTALS -->
 <header>
 	<div class="container-fluid hero d-flex flex-column justify-content-between" id="hero">
-		<div class="row d-flex hero-top justify-content-center align-items-center">
-			<div class="col-12 col-md-7 mt-2 mt-md-4 d-flex flex-column pt-2 justify-content-end align-items-center align-items-md-start text-white hero-text">
-				<div id="hello">
-					<p class="text1">Hello, I'm</p>
+		<div class="row d-flex hero-top gap-3 justify-content-center align-items-center">
+			<div class="col-12 col-sm-4 order-sm-3 d-flex justify-content-start align-items-center">
+				<div class="hero-socials d-sm-none d-flex flex-column gap-3">
+					<a class="social_icons" href="#container__contact"><i class="far fa-envelope fa-4x" title="Contact"></i></a>
+					<a class="social_icons" href="https://github.com/EricL81" target="_blank"><i class="fab fa-github fa-4x" title="gitHub"></i></a>
+					<a class="social_icons" href="https://linkedin.com/in/eric-lehmann1981" target="_blank"><i class="fab fa-linkedin-in fa-4x" title="LinkedIn"></i></a>
+					<a class="social_icons" href="https://twitter.com/lehm_eric" target="_blank"><i class="fab fa-twitter fa-4x" title="Twitter"></i></a>
 				</div>
-				<div class="d-flex flex-md-column">
-					<h1 class="text-clip px-2">ERIC</h1>
-					<h1 class="text-clip px-2 mb-2">LEHMANN</h1>
-				</div>
-				<div id="FS_dev">
-					<p class="text1">Full-Stack Developer</p>
-				</div>
-			</div>
-			<div class="col-12 col-md-4 mt-2 d-flex justify-content-center align-items-end">
 				<div id="me">
 					<img src="/css/blob.png" class="blob1" alt="blob1" />
 					<img src="/css/blob.png" class="blob2" alt="blob2" />
 					<img src="/css/profile-pic.webp" class="img-fluid profile-pic" alt="profile-pic" />
 				</div>
 			</div>
+			<div class="hero-socials order-sm-1 d-none d-sm-flex flex-column gap-3 me-3" id="hero-socials-dk">
+				<a class="social_icons" href="#container__contact"><i class="far fa-envelope fa-4x" title="Contact"></i></a>
+				<a class="social_icons" href="https://github.com/EricL81" target="_blank"><i class="fab fa-github fa-4x" title="gitHub"></i></a>
+				<a class="social_icons" href="https://linkedin.com/in/eric-lehmann1981" target="_blank"><i class="fab fa-linkedin-in fa-4x" title="LinkedIn"></i></a>
+				<a class="social_icons" href="https://twitter.com/lehm_eric" target="_blank"><i class="fab fa-twitter fa-4x" title="Twitter"></i></a>
+				<a class="social_icons" href="https://drive.google.com/file/d/1L7TkifhFgA2b3hp_wHFAXQ3zMr17ToiL/view?usp=sharing" target="_blank"><i>CV</i></a>
+			</div>
+			<div class="col-12 col-sm-7 mt-4 order-sm-2 d-flex flex-column pt-2 justify-content-end align-items-start text-white hero-text">
+				<div id="hello">
+					<p class="text1">Hello, I'm</p>
+				</div>
+				<div class="d-flex flex-md-column">
+					<h1 class="text-clip py-2 px-0 mb-3 fadeInUp-element">ERIC</h1>
+					<h1 class="text-clip py-2 px-0 ps-2 ps-md-0 mb-3 fadeInUp-element">LEHMANN</h1>
+				</div>
+				<div id="FS_dev">
+					<p class="text1">Full-Stack Developer</p>
+				</div>
+			</div>
 		</div>
-		<div class="row d-flex mx-0 hero-btm py-4 justify-content-center align-items-center">
-			<div class="col-10 col-md-6 col-lg-5 col-xl-4 mb-3 mb-lg-5 justify-content-center text1">
-				<h6 class="mb-0">
-					Welcome to my Portfolio Website ! Scroll-down or use the menu at the top to learn more about me and discover some of my projects. Feel free to contact me for any query or question by pressing the button down here. Thanks for your visit!
+		<div class="row d-flex mx-0 hero-btm text-left text-sm-center py-4 justify-content-start justify-content-sm-center align-items-center">
+			<div class="col-10 col-md-6 col-lg-5 col-xl-4 mb-3 mb-lg-5 justify-content-start text1">
+				<h6 class="mb-0 text-left">
+					Welcome to my Portfolio Website! Scroll-down or use the menu at the top to learn more about me and discover some of my projects. Feel free to contact me for any query or question by pressing the button down here. Thanks for your visit!
 				</h6>
 				<div class="row mt-3">
-					<div class="col-12 d-flex justify-content-center">
+					<div class="col-12 d-flex justify-content-start justify-content-sm-center">
 						<a href="#container__contact" class="neon-button mt-3">Contact me</a>
 					</div>
 				</div>
@@ -116,7 +129,7 @@
 		</div>
 
 		<div class="aboutme-content">
-			<div class="">
+			<div class="fadeInUp-element">
 				<p class="section_title">About me</p>
 			</div>
 			<div class="" id="aboutme__text">
@@ -141,7 +154,7 @@
 <!-- CONTAINER PROJECTS -->
 <section class="container-fluid" id="container__projects">
 	<div class="row">
-		<div class="col-12 text-center pt-3" id="projects__head">
+		<div class="col-12 text-center pt-3 fadeInUp-element" id="projects__head">
 			<p class="section_title">Projects</p>
 		</div>
 	</div>
@@ -821,7 +834,7 @@
 <!-- CONTAINER CONTACT -->
 <section class="container-fluid" id="container__contact">
 	<div class="row justify-content-center text-center w-100" id="contact__head">
-		<div class="col-10 col-md-8 col-lg-6 py-3">
+		<div class="col-12 text-center pt-3 fadeInUp-element">
 			<p class="section_title">Contact</p>
 		</div>
 	</div>
@@ -880,8 +893,8 @@
 <footer>
 	Created by <span><a href="#hero">Eric Lehmann</a></span> with &#128154; © 2021
 </footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 <script src="js/script.js"></script>
 </body>
 </html>
