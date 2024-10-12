@@ -37,6 +37,11 @@ body, #my-navbar {
     background: #f1f1f1;
 }
 
+header {
+    background: var(--bg-green);
+    position: relative;
+}
+
 header h1 {
     font-family: 'Montserrat', sans-serif;
     margin-bottom: 0;
@@ -101,20 +106,19 @@ header p::before {
 
 .hero {
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .hero-top {
     width: 100%;
     max-width: 2400px;
     padding: 12% 8% 5% 8%;
-    margin: 0 auto;
+    margin: 0;
 }
 
 @media (min-width: 768px) {
     .hero-top {
         padding: 100px 5% 15px 8%;
-        margin: 0
     }
 }
 
@@ -221,6 +225,34 @@ header p::before {
     top: 74px;
     left: 0;
     overflow: hidden;
+}
+
+nav.navbar {
+    min-height: 48px;
+}
+
+@media (min-width: 768px) {
+    nav.navbar {
+        min-height: 74px;
+    }
+}
+
+nav .navbar-collapse {
+    position: absolute;
+    top: 60px;
+    right: 10px;
+}
+
+@media (min-width: 768px) {
+    nav .navbar-collapse {
+        top: 85px;
+    }
+}
+
+@media (min-width: 992px) {
+    nav .navbar-collapse {
+        position: unset;
+    }
 }
 
 nav button {
@@ -423,12 +455,21 @@ nav button {
     box-shadow: 0.3rem 0.3rem 0.6rem var(--greenDark), -0.2rem -0.2rem 0.5rem var(--greenLight);
     border-radius: 1rem;
     display: flex;
+    flex-direction: column;
     align-items: center;
     position: relative;
     padding: .5rem;
     justify-content: center;
     flex-wrap: wrap;
-    width: auto;
+    width: fit-content;
+    background: var(--bg-green);
+}
+
+@media (min-width: 992px) {
+    .segmented-control {
+        margin-inline: unset;
+        flex-direction: row;
+    }
 }
 
 [data-theme="light"] .segmented-control {
@@ -509,13 +550,20 @@ nav button {
 
 #aboutme {
     background-image: linear-gradient(to bottom, #0c181d, #0e232c, #0f2f3c, #0e3b4d, #0b475f);
-    height: calc(100vh - 74px);
+    min-height: calc(100vh - 48px);
+    scroll-margin-top: 48px;
     position: relative;
     overflow-x: hidden;
     z-index: -1;
-    scroll-margin-top: 76px;
     -ms-overflow-style: none;
     scrollbar-width: none;
+}
+
+@media (min-width: 768px) {
+    #aboutme {
+        min-height: calc(100vh - 74px);
+        scroll-margin-top: 74px;
+    }
 }
 
 #aboutme .background-wrap {
@@ -546,10 +594,6 @@ nav button {
         font-size: 1rem;
     }
 }
-
-
-
-
 
 #aboutme__text p {
     font-size: larger;
@@ -583,11 +627,20 @@ nav button {
 #container__projects {
     position: relative;
     overflow: hidden;
-    min-height: calc(100vh - 74px);
-    scroll-margin-top: 74px;
+    min-height: calc(100vh - 48px);
+    scroll-margin-top: 48px;
     display: flex;
     flex-direction: column
 }
+
+@media (min-width: 768px) {
+    #container__projects {
+        min-height: calc(100vh - 74px);
+        scroll-margin-top: 74px;
+    }
+}
+
+
 
 #container__projects::before {
     content: " ";
@@ -832,11 +885,20 @@ h4 {
 #container__contact {
     background-image: linear-gradient(to bottom, #0b475f, #0e3b4d, #0f2f3c, #0e232c, #0c181d);
     color: var(--primary);
-    min-height: calc(100vh - 104px);
+    min-height: calc(100vh - 78px);
+    scroll-margin-top: 48px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
+@media (min-width: 768px) {
+    #container__contact {
+        min-height: calc(100vh - 104px);
+        scroll-margin-top: 74px;
+    }
+}
+
 
 #container__contact .row {
     max-width: 1200px;
