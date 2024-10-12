@@ -1,11 +1,10 @@
 # Live Website: https://ericlehmann.site/
 
-
 <br>
 
 # About this Project:
 
- I built my Portfolio from scratch with HTML, CSS, Javascript and Bootstrap5. I tried to showcase a broad panel of the skills I have learned in terms of Responsive layout, CSS with transitions, animations, transformations, layouts with z-index, hover effects, etc...
+I built my Portfolio from scratch with HTML, CSS, Javascript and Bootstrap5. I tried to showcase a broad panel of the skills I have learned in terms of Responsive layout, CSS with transitions, animations, transformations, layouts with z-index, hover effects, etc...
 
 <br>
 
@@ -17,17 +16,17 @@ I also created the Logo/favicon myself as I wanted something personalized (the l
 
 <br>
 
-## Tech practiced: 
+## Tech practiced:
 
-   - Landing-Page Portfolio
-   - CSS issues solved with JS
-   - Research of Web Design
-   - Creation of Logo
-   - Contact Form
-   - Responsive
-   - Animations, Transitions, Transforms
-   - Neumorphism
-   - Hover effects
+- Landing-Page Portfolio
+- CSS issues solved with JS
+- Research of Web Design
+- Creation of Logo
+- Contact Form
+- Responsive
+- Animations, Transitions, Transforms
+- Neumorphism
+- Hover effects
 
  <br>
  <br>
@@ -47,16 +46,16 @@ I also created the Logo/favicon myself as I wanted something personalized (the l
 
 ## Snapshots:
 
-![](css/projects/myportfolio1.png)  
+![](css/projects/myportfolio1.webp)
 
-<br>  
+<br>
 
-![](css/projects/myportfolio2.png)  
+![](css/projects/myportfolio2.webp)
 
-<br>  
+<br>
 
-![](css/projects/myportfolio3.png)  
+![](css/projects/myportfolio3.webp)
 
-<br>  
+<br>
 
-![](css/projects/myportfolio4.png)  
+![](css/projects/myportfolio4.webp)
