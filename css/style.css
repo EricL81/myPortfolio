@@ -373,13 +373,13 @@ nav button {
 
 .navbar-brand img {
     width: 24px;
-    height: 24px;
+    height: auto;
 }
 
 @media (min-width: 768px) {
     .navbar-brand img {
         width: 48px;
-        height: 48px;
+        height: auto;
     }
 }
 

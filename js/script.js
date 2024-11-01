@@ -199,6 +199,19 @@ fadeInUpElements.forEach((fadeInUpElement) => {
 	observerFadeInUp.observe(fadeInUpElement);
 });
 
+function updateLogo() {
+	const htmlElement = document.documentElement;
+	const logoImg = document.getElementById('myLogo');
+
+	if (htmlElement.getAttribute('data-theme') === 'light') {
+		logoImg.src = 'myLogo-dark.png';
+		logoImg.alt = 'Logo dark';
+	} else {
+		logoImg.src = 'myLogo-light.png';
+		logoImg.alt = 'Logo light';
+	}
+}
+
 // LightMode Toggle Switch
 const toggleSwitch = document.getElementById('lightmode-toggle-input');
 const currentTheme = localStorage.getItem('theme');
@@ -208,7 +221,11 @@ if (currentTheme) {
 
 	if (currentTheme === 'light') {
 		toggleSwitch.checked = true;
+	} else {
+		toggleSwitch.checked = false;
 	}
+
+	updateLogo();
 }
 
 function switchTheme(e) {
@@ -219,9 +236,12 @@ function switchTheme(e) {
 		document.documentElement.setAttribute('data-theme', 'dark');
 		localStorage.setItem('theme', 'dark');
 	}
+
+	updateLogo();
 }
 
 toggleSwitch.addEventListener('change', switchTheme, false);
+document.addEventListener('DOMContentLoaded', updateLogo);
 
 // Form validation
 document.getElementById('contact').addEventListener('submit', function (e) {
